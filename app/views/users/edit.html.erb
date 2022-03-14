@@ -1,0 +1,31 @@
+<div class="main users-edit">
+  <div class="container">
+    <div class="form-heading">Edit</div>
+    <div class="form users-form">
+      <div class="form-body">
+        <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+      
+        
+        <%= form_with(url: "/users/#{@user.id}/update", local: true) do |f| %>
+          <%= f.label :name %>
+          <%= f.text_field :name, value: @user.name %>
+    
+          <%= f.label :email %>
+          <%= f.email_field :email, value: @user.email %>
+
+          <%= f.label :image %>
+          <%= f.file_field :image %>
+    
+          <%= f.label :password %>
+          <%= f.password_field :password, value: @user.password %>
+    
+          <%= f.submit "Update" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
