@@ -26,3 +26,8 @@ group :development, :test do
   gem 'spring-watcher-listen', '2.0.1'
   gem 'rspec-rails', '3.5.1'
 end
+
+#本番環境用
+group :production do
+  gem 'pg'
+end
