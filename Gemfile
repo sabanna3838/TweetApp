@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "3.0.3"
+ruby "2.6.8"
 
 gem 'rails'
 # Use Puma as the app server
