@@ -30,9 +30,7 @@ group :development, :test do
 end
 
 #追加
-group :development do
-  gem 'sqlite3', '~> 1.4'
-end
+
 
 #本番環境用
 group :production do
